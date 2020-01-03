@@ -1,0 +1,76 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a.btn {
+	border: 1px solid;
+	// border-color: $color__border-button;
+	border-radius: 2rem;
+	// background: $color__background-button;
+	padding: 0.5rem 2rem;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+
+	&.not-allowed {
+        cursor: not-allowed;
+    }
+}
+
+.btn-invitaciones-outline,
+a.btn-invitaciones-outline{
+    background-color: rgba(255,255,255,1);
+    border-color: $color__blue_pastel;
+    color: $color__blue_pastel;
+    @include transition(0.3s);
+
+    &:hover, &:focus, &.focus, &:active, &.active{
+        color: white;
+        background-color: rgba(22,77,89,1);
+        border-color: $color__blue_pastel;
+		box-shadow: 0 4px 15px 1px rgba(0, 0, 0, .8);
+    }
+    // background-color: rgba(255,255,255,0.9);
+    // border-color: $color__blue;
+    // color: $color__blue;
+    // @include transition(0.3s);
+
+    // &:hover, &:focus, &.focus, &:active, &.active{
+    //     color: white;
+    //     background-color: rgba(42,164,191,1);
+    //     border-color: $color__blue;
+	// 	box-shadow: 0 4px 15px 1px rgba(0, 0, 0, .8);
+    // }
+}
+.btn-invitaciones,
+a.btn-invitaciones,
+a.wp-block-button__link{
+    background-color: $color__blue_pastel;
+    border-color: $color__blue_pastel;
+    color: white;
+    @include transition(0.3s);
+
+    &:hover, &:focus, &.focus, &:active, &.active{
+        background-color: $color__blue_dark;
+        border-color: $color__blue_dark;
+        box-shadow: 0 4px 15px 1px rgba(0, 0, 0, .8);
+        color: white;
+    }
+}
+.btn-white-outline{
+    background-color: rgba(255,255,255,0);
+    border-color: white;
+    color: white;
+    @include transition(0.3s);
+    &:hover, &:focus, &.focus, &:active, &.active{
+        color: black;
+        background-color: rgba(255,255,255,1);
+        box-shadow: 0 4px 15px 1px black;
+    }
+}

@@ -1,0 +1,52 @@
+/* THEME COLORS */
+$color__blue:             #2AA4BF;
+$color__blue_dark:        #164D59;
+$color__blue_alternate:   #3DF2F2;
+$color__black:            #0B1E26;
+$color__brown:            #BF9C5A;
+
+$color__pink:           #F2CED8;
+$color__pink_dark:      #F2AEC1;
+$color__blue_pastel:    #96D9D2;
+$color__green:          #C4F2D4;
+$color__yellow:         #F2EDD0; 
+
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: $color__blue_pastel;
+$color__link-visited: $color__blue_dark;
+$color__link-hover: $color__blue_dark;
+$color__text-main: black;
+
+$color__border-button: $color__blue_alternate #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+.blue-color{ color: $color__blue; }
+.blue-dark-color{ color: $color__blue_dark; }
+.blue-alternate-color{ color: $color__blue_alternate; }
+.black-color{ color: $color__black; }
+.brown-color{ color: $color__brown; }
+
+
+.pink-color{ color: $color__pink; }
+.pink-dark-color{ color: $color__pink_dark; }
+.blue-pastel-color{ color: $color__blue_pastel; }
+.green-color{ color: $color__green; }
+.yellow-color{ color: $color__yellow; }
+
+
+// .white-text{ color: white; }
+// .black-text{ color: black; }

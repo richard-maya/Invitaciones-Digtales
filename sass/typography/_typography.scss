@@ -1,0 +1,29 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+*{
+	font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+
+.title-font{
+	font-family: 'Courgette', cursive;
+}
+.text-font{
+	font-family: 'Raleway', sans-serif;
+}
+
+@import "headings";
+
+@import "copy";

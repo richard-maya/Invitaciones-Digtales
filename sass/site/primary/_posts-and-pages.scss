@@ -1,0 +1,60 @@
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Custom CSS for all posts/pages */
+section.hero{
+	min-height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.container-fluid.px-0{
+	overflow-x: hidden;
+}
+
+/* INTRO */
+section.intro-home{	
+	background-image: url('img/invitaciones-digitales-online.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+
+	h1{ text-shadow: 2px 2px 5px black; }
+}
+
+.intro-pattern{
+	background-image: url('img/ui/invitaciones-digitales-gratis.jpg');
+	background-repeat: repeat;
+}
+
+section.tutorial-intro{
+	background-image: url('img/invitaciones-digitales-gratis.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+
+	h2{ text-shadow: 2px 2px 5px black; }
+}
