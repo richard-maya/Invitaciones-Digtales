@@ -48,6 +48,20 @@ a.btn-invitaciones-outline{
 	// 	box-shadow: 0 4px 15px 1px rgba(0, 0, 0, .8);
     // }
 }
+.btn-invitaciones-pink-outline,
+a.btn-invitaciones-pink-outline{
+    background-color: rgba(255,255,255,1);
+    border-color: $color__pink_dark;
+    color: $color__pink_dark;
+    @include transition(0.3s);
+
+    &:hover, &:focus, &.focus, &:active, &.active{
+        color: white;
+        background-color: rgba(242,174,193,1);
+        border-color: $color__pink_dark;
+		box-shadow: 0 4px 15px 1px rgba(0, 0, 0, .8);
+    }
+}
 .btn-invitaciones,
 a.btn-invitaciones,
 a.wp-block-button__link{
@@ -67,6 +81,18 @@ a.wp-block-button__link{
     background-color: rgba(255,255,255,0);
     border-color: white;
     color: white;
+    @include transition(0.3s);
+    &:hover, &:focus, &.focus, &:active, &.active{
+        color: black;
+        background-color: rgba(255,255,255,1);
+        box-shadow: 0 4px 15px 1px black;
+    }
+}
+input.search-submit{
+    background-color: rgba(255,255,255,0.8);
+    border-color: black;
+    color: black;
+    font-size: 0.8rem;
     @include transition(0.3s);
     &:hover, &:focus, &.focus, &:active, &.active{
         color: black;

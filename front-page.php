@@ -18,7 +18,8 @@ get_header();
 					<div class='col-12 col-md-10 col-lg-8'>
 						<header class="text-center">
 							<h1 class="text-white">Invitaciones Digitales Gratis</h1>
-							<p class="lead text-white">Diseña tus invitaciones para toda ocasión y descárgalas gratis o envíalas por correo a todos tus invitados.</p>
+							<img src='<?php echo esc_url(get_template_directory_uri()); ?>/ui/invitaciones-digitales-gratis.svg' class='w-75 img-fluid py-3' alt='invitaciones-digitales-gratis'>
+							<p class="lead text-white">Diseña tus invitaciones digitales gratis para toda ocasión y descárgalas o envíalas por correo a todos tus invitados.</p>
 						</header>
 					</div>
 				</div>
@@ -60,7 +61,8 @@ get_header();
 				<div class='container'>
 					<div class="row">
 						<div class="col-12 text-center">
-							<h2 class="blue-pastel-color mb-4">Categorías</h2>
+							<h2 class="blue-pastel-color">Categorías</h2>
+							<img src='<?php echo esc_url(get_template_directory_uri()); ?>/ui/creador-de-invitaciones-digitales.svg' class='w-50 img-fluid py-4 mb-4' alt='creador-de-invitaciones-digitales'>
 						</div>
 					</div>
 					<div class="row">
@@ -91,7 +93,7 @@ get_header();
 					</div>
 					<div class="row">
 						<div class="col-12 text-center">
-							<a href="#" class="btn btn-invitaciones-outline" title="invitaciones-categorias">Ver todas las categorías</a>
+							<a href="#" class="btn btn-invitaciones-pink-outline" title="invitaciones-categorias">Ver todas las categorías</a>
 						</div>
 					</div>
 				</div>
@@ -102,7 +104,8 @@ get_header();
 				<div class='container py-3'>
 					<div class="row">
 						<div class="col-12 text-center">
-							<h2 class="blue-pastel-color mb-4">Nuevas Plantillas</h2>
+							<h2 class="blue-pastel-color">Nuevas Plantillas</h2>
+							<img src='<?php echo esc_url(get_template_directory_uri()); ?>/ui/creador-de-invitaciones-digitales.svg' class='w-50 img-fluid py-4 mb-4' alt='creador-de-invitaciones-digitales'>
 						</div>
 					</div>
 					<div class="row">
@@ -133,7 +136,7 @@ get_header();
 					</div>
 					<div class="row">
 						<div class="col-12 text-center">
-							<a href="#" class="btn btn-invitaciones-outline" title="invitaciones-categorias">Ver todas las categorías</a>
+							<a href="#" class="btn btn-invitaciones-pink-outline" title="invitaciones-categorias">Ver todas las categorías</a>
 						</div>
 					</div>
 				</div>

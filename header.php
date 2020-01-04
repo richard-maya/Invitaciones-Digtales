@@ -14,8 +14,39 @@
 <html lang="es-MX">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name="robots" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="copyright" content="Copyright © 2019 Invitaciones Digitales">
+	<meta name="resource-type" content="document" />
+
+	<!-- FAVICONS
+    ================================================== -->
+    
+    <!-- TAG MANAGER
+    ================================================== -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KCZ889H');</script> -->
+   
+    <!-- SITE TITLE
+    ================================================== -->
+    <title><?php wp_title(''); ?> | <?php bloginfo('name'); ?></title>
+
+    <!-- SEO INFO
+    ================================================== -->
+    <meta name="description" content="<?php if ( is_single() ) {
+        the_excerpt(); 
+    } else {
+        bloginfo('description');
+    }?>">
+    <meta name="keywords" content="invitaciones digitales">
+    <meta name="author" content="Invitaciones digitales">
 
 	<?php wp_head(); ?>
 </head>

@@ -19,4 +19,12 @@ a {
 	}
 
 	font-family: 'Raleway', sans-serif;
+
+	&.tag-cloud-link{
+		color: $color__pink_dark;
+
+		&:hover{
+			color: $color__pink;
+		}
+	}
 }
