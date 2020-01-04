@@ -9,24 +9,23 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php if ( is_singular() ) : ?>
+<?php else : ?>
+	
+	<div class="col-12 col-md-4">
+		<figure class="text-center">
+			<a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'>
+				<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid w-100 shadow-hover']); ?>
+			</a>
+			<figcaption class="py-2">
+				<a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'><?php the_title(); ?></a>
+			</figcaption>
+		</figure>
+	</div>
 
-	<?php if ( is_singular() ) : ?>
-	<?php else : ?>
-		
-		<div class="row">
-			<div class="col-12 col-md-4">
-				<a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'>
-					<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid w-100 shadow-hover']); ?>
-				</a>
-			</div>
-			<div class="col-12 col-md-8">
-				<h2><a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'><?php the_title(); ?></a></h2>
-			</div>
-		</div>
+<?php endif; ?>
 
-	<?php endif; ?>
-
+<!-- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> -->
 
 	<!-- <header class="entry-header">
 		<?php
@@ -75,4 +74,4 @@
 		?>
 	</div> -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+<!-- </article> --><!-- #post-<?php the_ID(); ?> -->

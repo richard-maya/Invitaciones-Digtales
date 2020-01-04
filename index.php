@@ -15,45 +15,63 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area default-page-bg">
+	<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+		<section class="section-title d-flex align-items-center" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/img/invitaciones-digitales-aplicacion.jpg');">
+			<div class="container-fluid mx-0 px-0 py-5">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10 col-lg-8 text-center">
+						<header>
+							<h1 class="text-white">Invitaciones Digitales Plantillas</h1>
+						</header>
+						<img src='<?php echo esc_url(get_template_directory_uri()); ?>/ui/editor-de-invitaciones-digitales.svg' class='w-75 img-fluid py-4' alt='editor-de-invitaciones-digitales'>
+					</div>
+				</div>
+			</div>
+		</section>
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+		<section class="categories-list py-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-8">
+						<div class="row">
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+								
+								<div class="col-12 col-md-6 col-lg-4 px-2 mx-0">
+									<figure class="text-center">
+										<a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'>
+											<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid w-100 shadow-hover mb-4']); ?>
+										</a>
+										<figcaption class="py-2">
+											<a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'><?php the_title(); ?></a>
+										</figcaption>
+									</figure>
+								</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+							<?php endwhile; ?>
 
-			endwhile;
+							<?php else : ?>
+								<p><?php esc_html_e( 'Lo sentimos, no hay plantillas en éste momento.' ); ?></p>
+							<?php endif; ?>	
+						</div>
 
-			the_posts_navigation();
+						<div class="row justify-content-center py-4">
+							<div class="col-12 text-center">
+								<nav class="navigation-posts-prevnext"><?php posts_nav_link(' ','Más Recientes','Más Atrás'); ?></nav>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<?php get_sidebar(); ?>
+					</div>
+				</div>
+			</div>
+		</section>
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

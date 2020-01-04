@@ -24,14 +24,41 @@ hr {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
-
-	// &.svg-image{
-	// 	filter:hue-rotate(90deg);
-	// }
 }
 
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+	position: relative;
+	@include transition(0.3s);
+
+	img{
+		display: block;
+	}
+
+	figcaption {
+		background: rgb(0,0,0);
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		font-size: 1rem;
+		opacity: 0;
+		@include transition(0.3s);
+
+		a{
+			color: white;
+
+			&:hover{
+				color: white;
+			}
+		}
+	}
+
+	&:hover figcaption{
+		opacity: 1;
+		@include transition(0.3s);
+	}
 }
 
 @import "tables";
