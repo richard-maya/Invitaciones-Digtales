@@ -17,8 +17,9 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 3px 0.5rem;
 	font-size: 1rem;
+	font-family: 'Raleway', sans-serif;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -28,8 +29,16 @@ textarea {
 select {
 	font-size: 1rem;
 	border: 1px solid $color__border-input;
+	font-family: 'Raleway', sans-serif;
 }
 
 textarea {
 	width: 100%;
+	font-size: 1rem;
+	font-family: 'Raleway', sans-serif;
+}
+
+label{
+	font-size: 1rem;
+	font-family: 'Raleway', sans-serif;
 }

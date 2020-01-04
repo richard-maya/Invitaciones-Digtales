@@ -62,6 +62,40 @@ get_header();
 								<nav class="navigation-posts-prevnext"><?php posts_nav_link(' ','Más Recientes','Más Atrás'); ?></nav>
 							</div>
 						</div>
+
+						<div class="row py-4">
+							<div class="col-12">
+								<h3 class="blue-pastel-color mb-3">Categorías</h3>
+							</div>
+
+							<?php if( have_rows('categorias', 1898) ):
+								$rows = get_field('categorias', 1898 );
+								$rand_rows = array_rand($rows, 3);
+								
+								for ($x = 0; $x < 3; $x++) { 
+									$name_category = $rows[$rand_rows[$x]]['nombre_categoria']; 
+									$link_category = $rows[$rand_rows[$x]]['link_categoria']; 
+									$image_category = $rows[$rand_rows[$x]]['imagen_categoria'];
+									the_row(); ?>
+	
+									<div class="col-12 col-md-4 text-center">
+										<a href="/category/<?php echo $link_category; ?>" title="invitaciones-digitales-para-<?php echo $name_category; ?>" rel="tag">
+											<img src='<?php echo esc_url($image_category['url']); ?>' alt='<?php echo esc_attr($image_category['alt']); ?>' class="img-fluid w-100 mb-2 shadow-hover"/>
+											<h6><?php echo $name_category; ?></h6>
+										</a>
+									</div>
+	
+								<?php }
+							else :
+								echo '<p>No hay categorías en éste momento.</p>';
+							endif; ?>
+						</div>
+
+						<div class="row">
+							<div class="col-12 text-center">
+								<a href="/invitaciones-para-toda-ocasion" class="btn btn-invitaciones-pink-outline" title="invitaciones-para-toda-ocasión">Ver todas las categorías</a>
+							</div>
+						</div>
 					</div>
 					<div class="col-12 col-md-4">
 						<?php get_sidebar(); ?>

@@ -70,32 +70,29 @@ get_header();
 						</div>
 					</div>
 					<div class="row">
-						<div class='col-6 col-md-3 text-center'>
-							<a href="/category/<?php echo $categoriesGroup['category_1']['link']; ?>" title="invitaciones-digitales-para-<?php echo $categoriesGroup['category_1']['name']; ?>" rel="tag">
-								<img src="<?php echo $categoriesGroup['category_1']['image']; ?>" alt="invitaciones-digitales-para-<?php echo $categoriesGroup['category_1']['name']; ?>" class="img-fluid w-100 shadow-hover mb-2"/>
-								<p class="lead title-font"><?php echo $categoriesGroup['category_1']['name']; ?></p>
-							</a>
-						</div>
-						<div class='col-6 col-md-3 text-center'>
-							<a href="/category/<?php echo $categoriesGroup['category_2']['link']; ?>" title="invitaciones-digitales-para-<?php echo $categoriesGroup['category_2']['name']; ?>" rel="tag">
-								<img src="<?php echo $categoriesGroup['category_2']['image']; ?>" alt="invitaciones-digitales-para-<?php echo $categoriesGroup['category_2']['name']; ?>" class="img-fluid w-100 shadow-hover mb-2"/>
-								<p class="lead title-font"><?php echo $categoriesGroup['category_2']['name']; ?></p>
-							</a>
-						</div>
-						<div class='col-6 col-md-3 text-center'>
-							<a href="/category/<?php echo $categoriesGroup['category_3']['link']; ?>" title="invitaciones-digitales-para-<?php echo $categoriesGroup['category_3']['name']; ?>" rel="tag">
-								<img src="<?php echo $categoriesGroup['category_3']['image']; ?>" alt="invitaciones-digitales-para-<?php echo $categoriesGroup['category_3']['name']; ?>" class="img-fluid w-100 shadow-hover mb-2"/>
-								<p class="lead title-font"><?php echo $categoriesGroup['category_3']['name']; ?></p>
-							</a>
-						</div>
-						<div class='col-6 col-md-3 text-center'>
-							<a href="/category/<?php echo $categoriesGroup['category_4']['link']; ?>" title="invitaciones-digitales-para-<?php echo $categoriesGroup['category_4']['name']; ?>" rel="tag">
-								<img src="<?php echo $categoriesGroup['category_4']['image']; ?>" alt="invitaciones-digitales-para-<?php echo $categoriesGroup['category_4']['name']; ?>" class="img-fluid w-100 shadow-hover mb-2"/>
-								<p class="lead title-font"><?php echo $categoriesGroup['category_4']['name']; ?></p>
-							</a>
-						</div>
+						<?php if( have_rows('categorias', 1898) ):
+							$rows = get_field('categorias', 1898 );
+							$rand_rows = array_rand($rows, 4);
+							
+							for ($x = 0; $x < 4; $x++) { 
+								$name_category = $rows[$rand_rows[$x]]['nombre_categoria']; 
+								$link_category = $rows[$rand_rows[$x]]['link_categoria']; 
+								$image_category = $rows[$rand_rows[$x]]['imagen_categoria'];
+								the_row(); ?>
+
+								<div class="col-6 col-md-3 text-center">
+									<a href="/category/<?php echo $link_category; ?>" title="invitaciones-digitales-para-<?php echo $name_category; ?>" rel="tag">
+										<img src='<?php echo esc_url($image_category['url']); ?>' alt='<?php echo esc_attr($image_category['alt']); ?>' class="img-fluid w-100 mb-2 shadow-hover"/>
+										<h6><?php echo $name_category; ?></h6>
+									</a>
+								</div>
+
+							<?php }
+						else :
+							echo '<p>No hay categorías en éste momento.</p>';
+						endif; ?>
 					</div>
-					<div class="row">
+					<div class="row py-4">
 						<div class="col-12 text-center">
 							<a href="/invitaciones-para-toda-ocasion" class="btn btn-invitaciones-pink-outline" title="invitaciones-para-toda-ocasión">Ver todas las categorías</a>
 						</div>
@@ -132,9 +129,9 @@ get_header();
 						<?php endif; ?>
 						<?php wp_reset_query(); ?>
 					</div>
-					<div class="row">
+					<div class="row py-4">
 						<div class="col-12 text-center">
-							<a href="#" class="btn btn-invitaciones-pink-outline" title="invitaciones-categorias">Ver todas las categorías</a>
+							<a href="/plantillas" class="btn btn-invitaciones-pink-outline" title="invitaciones-categorias">Ver todas las plantillas</a>
 						</div>
 					</div>
 				</div>

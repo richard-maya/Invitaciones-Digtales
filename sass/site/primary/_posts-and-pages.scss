@@ -47,7 +47,14 @@ section.hero{
 	min-height: 35vh;
 	width: 100%;
 
-	h1{ text-shadow: 2px 2px 5px black; }
+	h1{ 
+		text-shadow: 2px 2px 5px black; 
+
+		a[rel="category tag"]{
+			color: white;
+			font-family: 'Courgette', cursive;
+		}
+	}
 }
 
 article{

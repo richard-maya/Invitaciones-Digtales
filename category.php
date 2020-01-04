@@ -77,26 +77,22 @@ get_header();
 						</div>
 
 						<?php if( have_rows('categorias', 1898) ):
-							// $rows = get_field('categorias', 1898 );
+							$rows = get_field('categorias', 1898 );
+							$rand_rows = array_rand($rows, 3);
+							
 							for ($x = 0; $x < 3; $x++) { 
-								// $rand_row = $rows[ array_rand( $rows, 4 ) ]; 
-								// echo $rows[$rand_row[$x]];
-
-								$rows = get_field('categorias', 1898 );
-								$rand_row = $rows[ array_rand( $rows ) ]; 
-								$rand_row_name = $rand_row[ 'nombre_categoria' ]; 
-								$rand_row_link = $rand_row[ 'link_categoria' ]; 
-								$rand_row_image = $rand_row[ 'imagen_categoria' ];
-
+								$name_category = $rows[$rand_rows[$x]]['nombre_categoria']; 
+								$link_category = $rows[$rand_rows[$x]]['link_categoria']; 
+								$image_category = $rows[$rand_rows[$x]]['imagen_categoria'];
 								the_row(); ?>
 
-								<div class="col-6 col-md-4">
-									<a href="/category/<?php echo $rand_row_link; ?>" title="invitaciones-digitales-para-<?php echo $rand_row_name; ?>" rel="tag">
-										<h6><?php echo $rand_row_name; ?></h6>
+								<div class="col-6 col-md-4 text-center">
+									<a href="/category/<?php echo $link_category; ?>" title="invitaciones-digitales-para-<?php echo $name_category; ?>" rel="tag">
 										<?php $image = get_sub_field('imagen_categoria');
-										if( !empty( $rand_row_image ) ): ?>
-											<img src='<?php echo esc_url($rand_row_image['url']); ?>' alt='<?php echo esc_attr($rand_row_image['alt']); ?>' class="img-fluid w-100 mb-4 shadow-hover"/>
+										if( !empty( $image_category ) ): ?>
+											<img src='<?php echo esc_url($image_category['url']); ?>' alt='<?php echo esc_attr($image_category['alt']); ?>' class="img-fluid w-100 mb-2 shadow-hover"/>
 										<?php endif; ?>
+										<h6><?php echo $name_category; ?></h6>
 									</a>
 								</div>
 

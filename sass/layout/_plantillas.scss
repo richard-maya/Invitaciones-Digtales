@@ -1,0 +1,23 @@
+section.creador-invitaciones{
+    .invitation-template{
+        width: 295.2px;
+        height: 417.6px;
+        padding: 5%;
+
+        .invitation-frame{
+            width: 100%;
+            min-height: 100%;
+            padding: 5%;
+
+            .invitation-content{
+                width: 100%;
+                min-height: 345px;
+
+                p{
+                    font-size: 0.5rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
