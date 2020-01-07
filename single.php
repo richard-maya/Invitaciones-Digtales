@@ -15,19 +15,8 @@ get_header();
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		
-		<section class="section-title d-flex align-items-center" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/img/invitaciones-digitales-aplicacion.jpg');">
-			<div class="container-fluid mx-0 px-0 py-5">
-				<div class="row justify-content-center">
-					<div class="col-12 col-md-10 col-lg-8 text-center">
-						<header>
-							<h1 class="text-white">Invitación para <?php the_category(', '); ?></h1>
-						</header>
-						<img src='<?php echo esc_url(get_template_directory_uri()); ?>/ui/editor-de-invitaciones-digitales.svg' class='w-75 img-fluid py-4' alt='editor-de-invitaciones-digitales'>
-					</div>
-				</div>
-			</div>
-		</section>
-
+		<!-- TITLE SECTION -->
+		<?php get_template_part( 'template-parts/title-section' ); ?>
 
 		<section class="creador-invitaciones py-5">
 			<div class="container px-0">
@@ -42,32 +31,32 @@ get_header();
 								<!-- FORM -->
 								<div class="col-12 col-md-4">
 									<div class="form-group">
-										<label for="nombre">Nombre del festejad@ <b class="pink-dark-color">*</b></label>
-										<input type="text" class="form-control" id="nombre">
+										<label for="nombre">Nombre del Festejada <b class="pink-dark-color">*</b></label>
+										<input type="text" class="form-control" id="nombre_input" value="Nombre Apellido">
 									</div>
 									<div class="form-group">
 										<label for="texto_1">Texto</label>
-										<textarea class="form-control" id="texto_1" rows="3"></textarea>
+										<textarea class="form-control" id="texto_1_input" rows="3"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="fecha">Fecha <b class="pink-dark-color">*</b></label>
-										<input type="date" class="form-control" id="fecha">
+										<input type="date" class="form-control" id="fecha_input">
 									</div>
 									<div class="form-group">
 										<label for="hora">Hora <b class="pink-dark-color">*</b></label>
-										<input type="time" class="form-control" id="hora">
+										<input type="time" class="form-control" id="hora_input">
 									</div>
 									<div class="form-group">
 										<label for="direccion_1">Dirección <b class="pink-dark-color">*</b></label>
-										<textarea class="form-control" id="direccion_1" rows="3"></textarea>
+										<textarea class="form-control" id="direccion_1_input" rows="3"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="texto_2">Texto final</label>
-										<textarea class="form-control" id="texto_2" rows="3"></textarea>
+										<textarea class="form-control" id="texto_2_input" rows="3"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="icono">Ícono</label>
-										<select class="form-control" id="icono">
+										<select class="form-control" id="icono_input">
 										<option>Selecciona un ícono</option>
 										<option>2</option>
 										</select>
@@ -90,11 +79,12 @@ get_header();
 													<div class="row justify-content-center">
 														<div class="col-12">
 															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/xv-anos/invitacion-xv-anos-1.png' class='img-fluid w-25 mb-2' alt='invitacion-xv-anos-1'><br>
-															<p>Te invito a mis</p>
-															<p style="color: #E881A8;">XV AÑOS</p>
-															<p style="color: #CFA027;">Nombre Festejada</p>
-															<p>Sábado 1 de Enero a las 7:00pm</p>
-															<p>Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
+															<p id="texto_1_field">Te invito a mis</p>
+															<p id="evento_field" class="template-color-1">XV AÑOS</p>
+															<p id="nombre_field" class="template-color-2">Nombre Festejada</p>
+															<p id="fecha_y_hora_field"><span id="fecha_field">Sábado 1 de Enero</span> a las <span id="hora_field">7:00pm</span></p>
+															<p id="direccion_1_field">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
+															<p id="texto_2_field">¡Te esperamos!</p>
 														</div>
 													</div>
 												</div>
@@ -102,49 +92,22 @@ get_header();
 										</div>
 									</div>
 
+									<style>
+										.invitation-content p.template-color-1{
+											color: #E881A8;
+										}
+										.invitation-content p.template-color-2{
+											color: #CFA027;
+										}
+									</style>
+
 								</div>
 							</div>
 						</section>
 
 						<!-- RELATED TEMPLATES -->
-						<section class="related-templates py-5">
-							<div class="container">
-								<div class="row text-center">
-									<h3 class="blue-pastel-color">Plantillas Similares</h3>
-								</div>
-
-								<div class="row">
-									<?php $relatedArgsQuery = array(
-										'posts_per_page' => 6,
-										'nopaging' => false,
-										'orderby' => 'rand',
-										'category_name' => 'baby-shower',
-										'post__not_in' => array(1837)
-									);
-
-									$relatedPostsQuery = new WP_Query( $relatedArgsQuery );
-
-									if ( $relatedPostsQuery->have_posts() ) : while ( $relatedPostsQuery->have_posts() ) : $relatedPostsQuery->the_post(); ?>
-								
-										<div class="col-12 col-md-6 col-lg-4 px-2 mx-0">
-											<figure class="text-center">
-												<a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'>
-													<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid w-100 shadow-hover mb-4']); ?>
-												</a>
-												<figcaption class="py-2">
-													<a href='<?php the_permalink(); ?>' title='<?php the_title_attribute(); ?>' rel='bookmark'><?php the_title(); ?></a>
-												</figcaption>
-											</figure>
-										</div>
-
-									<?php endwhile; ?>
-
-									<?php else : ?>
-										<p><?php esc_html_e( 'Lo sentimos, no hay plantillas en éste momento.' ); ?></p>
-									<?php endif; $relatedPostsQuery->reset_postdata(); ?>
-								</div>
-							</div>
-						</section>
+						<?php get_template_part( 'template-parts/related', 'posts' ); ?>
+						
 					</div>
 					<div class="col-12 col-md-4 col-lg-3">
 						<?php get_sidebar(); ?>

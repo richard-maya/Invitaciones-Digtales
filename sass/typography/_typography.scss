@@ -24,6 +24,30 @@ textarea {
 	font-family: 'Raleway', sans-serif;
 }
 
+// TEMPLATES FONTS CURSIVE
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+
+// .pacifico-font{ font-family: 'Pacifico', cursive; }
+// .dancing-script-font{ font-family: 'Dancing Script', cursive; }
+// .great-vibes-font{ font-family: 'Great Vibes', cursive; }
+// .satisfy-font{ font-family: 'Satisfy', cursive; }
+
+
+// TEMPLATES FONTS SANS SERIF
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+// .open-sans-font{ font-family: 'Open Sans', sans-serif; }
+// .lato-font{ font-family: 'Lato', sans-serif; }
+// .montserrat-font{ font-family: 'Montserrat', sans-serif; }
+// .quicksand-font{ font-family: 'Quicksand', sans-serif; }
+
+
 @import "headings";
 
 @import "copy";
