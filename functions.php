@@ -158,6 +158,13 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/widgets.php';
 
 /**
+ * ACF Options Page
+ */
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
+/**
  * Bootstrap nav-walker
  */
 require get_template_directory() . '/inc/bootstrap-navwalker.php';

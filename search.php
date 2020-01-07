@@ -10,46 +10,63 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section id="primary" class="content-area default-page-bg">
+	<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<section class="section-title d-flex align-items-center" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/img/invitaciones-digitales-aplicacion.jpg');">
+			<div class="container-fluid mx-0 px-0 py-5">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10 col-lg-8 text-center">
+						<header>
+							<h1 class="text-white"><?php printf( esc_html__( 'Búsqueda: %s', 'invitaciones' ), '<span style="text-decoration: underline";>' . get_search_query() . '</span>' ); ?></h1>
+						</header>
+						<img src='<?php echo esc_url(get_template_directory_uri()); ?>/ui/editor-de-invitaciones-digitales.svg' class='w-75 img-fluid py-4' alt='editor-de-invitaciones-digitales'>
+					</div>
+				</div>
+			</div>
+		</section>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'invitaciones' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+		<section class="show-results py-5">
+			<div class="container px-0">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-8">
+						<div class="row">
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+							/**
+							 * Run the loop for the search to output the results.
+							 * If you want to overload this in a child theme then include a file
+							 * called content-search.php and that will be used instead.
+							 */
+							get_template_part( 'template-parts/content', 'search' );
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+							endwhile;
 
-			endwhile;
+							the_posts_navigation();
 
-			the_posts_navigation();
+							else :
 
-		else :
+							get_template_part( 'template-parts/content', 'none' );
 
-			get_template_part( 'template-parts/content', 'none' );
+							endif; ?>
+						</div>
 
-		endif;
-		?>
+						<!-- RELATED CATEGORIES -->
+						<div class="py-4">
+							<?php get_template_part( 'template-parts/related', 'categories' ); ?>
+						</div>
+					</div>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+
+					<div class="col-12 col-md-4">
+						<?php get_sidebar(); ?>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main><!-- #main -->
+</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -23,8 +23,8 @@ get_header();
 				<div class="row justify-content-center">
 					<div class="col-12 col-md-8 col-lg-9">
 						<h2 class="blue-pastel-color">Instrucciones</h2>
-						<p>Crear una invitación digital con nuestra herramienta es bastante sencillo. Sólo coloca tu información en el formulario y descárgala o envíala por correo a todos tus invitados.</p>
-						<h6 class="pink-dark-color text-right"><small class="title-font">Plantilla Número <?php the_id(); ?>, <?php the_title(); ?></small></h6>
+						<p><?php the_field('instrucciones', 'option'); ?></p>
+						<h6 class="pink-dark-color text-right"><small class="title-font">Plantilla <?php the_id(); ?>, <?php the_title(); ?></small></h6>
 
 						<section class="template-form py-4">
 							<div class="row">
@@ -91,16 +91,6 @@ get_header();
 											</div>
 										</div>
 									</div>
-
-									<style>
-										.invitation-content p.template-color-1{
-											color: #E881A8;
-										}
-										.invitation-content p.template-color-2{
-											color: #CFA027;
-										}
-									</style>
-
 								</div>
 							</div>
 						</section>

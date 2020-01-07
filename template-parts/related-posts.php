@@ -19,8 +19,9 @@
             <?php 
             $postID = get_the_id();
             $categorySlug = get_the_category();
+            $relatedPostsTemplates = get_field('related_posts_templates', 'option');
             $relatedArgsQuery = array(
-                'posts_per_page' => 6,
+                'posts_per_page' => $relatedPostsTemplates,
                 'nopaging' => false,
                 'orderby' => 'rand',
                 'category_name' => $categorySlug[0]->name,

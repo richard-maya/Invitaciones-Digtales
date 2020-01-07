@@ -15,6 +15,7 @@
 get_header();
 ?>
 
+
 <div id="primary" class="content-area default-page-bg">
 	<main id="main" class="site-main">
 
@@ -23,7 +24,7 @@ get_header();
 				<div class="row justify-content-center">
 					<div class="col-12 col-md-10 col-lg-8 text-center">
 						<header>
-							<h1 class="text-white">Invitaciones Digitales Plantillas</h1>
+							<h1 class="text-white">Etiqueta: <span style="text-decoration: underline;"><?php single_tag_title(); ?></span></h1>
 						</header>
 						<img src='<?php echo esc_url(get_template_directory_uri()); ?>/ui/editor-de-invitaciones-digitales.svg' class='w-75 img-fluid py-4' alt='editor-de-invitaciones-digitales'>
 					</div>
@@ -37,13 +38,7 @@ get_header();
 				<div class="row justify-content-center">
 					<div class="col-12 col-md-8">
 						<div class="row">
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-							/* $templatesArgs = array(
-								'orderby' => 'rand'
-							);
-				
-							$templatesQuery = new WP_Query( $templatesArgs );
-							if ( $templatesQuery->have_posts() ) : while ( $templatesQuery->have_posts() ) : $templatesQuery->the_post(); */ ?>
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 								
 								<div class="col-12 col-md-6 col-lg-4 px-2 mx-0">
 									<figure class="text-center">
@@ -93,7 +88,7 @@ get_header();
 	
 								<?php }
 							else :
-								echo '<p>No hay categorías en éste momento.</p>';
+								echo '<p>No hay plantillas en éste momento.</p>';
 							endif; ?>
 						</div>
 

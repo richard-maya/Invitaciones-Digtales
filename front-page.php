@@ -110,8 +110,10 @@ get_header();
 						</div>
 					</div>
 					<div class="row">
-						<?php $invitacionesLista = new WP_Query( array( 'posts_per_page' => 8 ) ); ?>
-						<?php if ( $invitacionesLista->have_posts() ) : while ( $invitacionesLista->have_posts() ) : $invitacionesLista->the_post(); ?>
+						<?php 
+						$frontPageTemplates = get_field('fron_page_templates', 'option');
+						$invitacionesLista = new WP_Query( array( 'posts_per_page' => $frontPageTemplates ) ); 
+						if ( $invitacionesLista->have_posts() ) : while ( $invitacionesLista->have_posts() ) : $invitacionesLista->the_post(); ?>
 							
 							<div class="col-6 col-md-3">
 								<figure class="text-center">

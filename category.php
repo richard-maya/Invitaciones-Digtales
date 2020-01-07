@@ -36,7 +36,17 @@ get_header();
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-8">
 					<div class="row">
-						<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+						<?php 
+							// if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+							$categoryName = get_the_category();
+							$categorySearchArgs = array(
+								'orderby' => 'rand',
+								'category_name' => $categoryName[0]->name
+							);
+				
+							$categorySearchQuery = new WP_Query( $categorySearchArgs );
+							if ( $categorySearchQuery->have_posts() ) : while ( $categorySearchQuery->have_posts() ) : $categorySearchQuery->the_post();
 	
 							/*
 							* Include the Post-Type-specific template for the content.
