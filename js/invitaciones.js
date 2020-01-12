@@ -87,41 +87,53 @@ $("#font-size-input").change(function() {
 });
 
 $("#title-size-input").change(function() {
-    var fontSize = document.getElementById("title-size-input").value;
-    $("#evento-field").css('font-size', (fontSize)/2 + "px");
+    var titleFontSize = document.getElementById("title-size-input").value;
+    $("#evento-field").css('font-size', (titleFontSize)/2 + "px");
 });
 
 $("#name-size-input").change(function() {
-    var fontSize = document.getElementById("name-size-input").value;
-    $("#nombre-field").css('font-size', (fontSize)/2 + "px");
+    var nameFontSize = document.getElementById("name-size-input").value;
+    $("#nombre-field").css('font-size', (nameFontSize)/2 + "px");
 });
 
 $("#margin-input").change(function() {
-    var fontSize = document.getElementById("margin-input").value;
-    $(".invitation-content-aspect-ratio").css('padding-left', (fontSize)/2 + "px");
-    $(".invitation-content-aspect-ratio").css('padding-right', (fontSize)/2 + "px");
-    // $(".invitation-content").css('padding', (fontSize)/2 + "px");
+    var marginSize = document.getElementById("margin-input").value;
+    $(".invitation-content-aspect-ratio").css('padding-left', (marginSize)/2 + "px");
+    $(".invitation-content-aspect-ratio").css('padding-right', (marginSize)/2 + "px");
 });
 
 $("#title-font-input").change(function () {
-    var titleFont = document.getElementById("title-font-input").value;
-    $("#evento-field").css('font-family', "'" + titleFont + "'");
-    $("#nombre-field").css('font-family', "'" + titleFont + "'");
+    var primaryFont = document.getElementById("title-font-input").value;
+    $("#evento-field").css('font-family', "'" + primaryFont + "', cursive");
+    $("#nombre-field").css('font-family', "'" + primaryFont + "', cursive");
 });
 
 $("#secondary-font-input").change(function () {
     var secondaryFont = document.getElementById("secondary-font-input").value;
-    $("#texto-1-field").css('font-family', "'" + secondaryFont + "'");
-    $("#fecha-y-hora-field").css('font-family', "'" + secondaryFont + "'");
-    $("#direccion-1-field").css('font-family', "'" + secondaryFont + "'");
-    $("#texto-2-field").css('font-family', "'" + secondaryFont + "'");
+    $("#texto-1-field").css('font-family', "'" + secondaryFont + "', sans-serif");
+    $("#fecha-y-hora-field").css('font-family', "'" + secondaryFont + "', sans-serif");
+    $("#direccion-1-field").css('font-family', "'" + secondaryFont + "', sans-serif");
+    $("#texto-2-field").css('font-family', "'" + secondaryFont + "', sans-serif");
 });
 
 
+// $('#save-image').click(function(){
+//     $("p.signature").removeClass('d-none').addClass('d-block');
+//     domtoimage.toBlob(document.getElementById('invitation-template-aspect-ratio')).then(function (blob) {
+//         window.saveAs(blob, 'mi-invitacion.png');
+//         $("p.signature").removeClass('d-block').addClass('d-none');
+//     });
+// });
+
+// TODO: Update invitaciones.js
+
 $('#save-image').click(function(){
     $("p.signature").removeClass('d-none').addClass('d-block');
-    domtoimage.toBlob(document.getElementById('invitation-template-aspect-ratio')).then(function (blob) {
-        window.saveAs(blob, 'mi-invitacion.png');
+    domtoimage.toJpeg(document.getElementById('invitation-template-aspect-ratio'), { quality: 1 }).then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'mi-invitacion.jpg';
         $("p.signature").removeClass('d-block').addClass('d-none');
+        link.href = dataUrl;
+        link.click();
     });
 });

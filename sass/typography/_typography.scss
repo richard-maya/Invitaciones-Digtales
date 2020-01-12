@@ -14,8 +14,97 @@ textarea {
 	font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+// TITLES
+@font-face {
+	font-family: 'AguaFina Script';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/AguafinaScript-Regular.ttf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Alex Brush';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/AlexBrush-Regular.ttf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Blackjack';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/blackjack.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Dancing Script';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/DancingScript-Regular.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Grand Hotel';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/GrandHotel-Regular.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Great Vibes';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/GreatVibes-Regular.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Kaushan Script';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/KaushanScript-Regular.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lobster';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Lobster.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Milkshake';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Milkshake.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Pacifico';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Pacifico.ttf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Courgette';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Courgette-Regular.ttf);
+	font-display: swap;
+}
+
+
+// TEXTS
+@font-face {
+	font-family: 'Raleway';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Raleway-Regular.ttf);
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Raleway-Bold.ttf);
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Quicksand';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Quicksand-Regular.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/Montserrat-Medium.otf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/OpenSans-Regular.ttf);
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Josefin Sans';
+	src: url(https://invitaciones-digitales.net/wp-content/themes/invitaciones/fonts/JosefinSans-Regular.ttf);
+	font-display: swap;
+}
 
 .title-font{
 	font-family: 'Courgette', cursive;
@@ -25,27 +114,22 @@ textarea {
 }
 
 // TEMPLATES FONTS CURSIVE
-@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
 
-// .pacifico-font{ font-family: 'Pacifico', cursive; }
-// .dancing-script-font{ font-family: 'Dancing Script', cursive; }
-// .great-vibes-font{ font-family: 'Great Vibes', cursive; }
-// .satisfy-font{ font-family: 'Satisfy', cursive; }
+.aguafina-script-font{ font-family: 'AguaFina Script', cursive; }
+.alex-brush-font{ font-family: 'Alex Brush', cursive; }
+.blackjack-font{ font-family: 'Blackjack', cursive; }
+.dancing-script-font{ font-family: 'Dancing Script', cursive; }
+.grand-hotel-font{ font-family: 'Grand Hotel', cursive; }
+.great-vibes-font{ font-family: 'Great Vibes', cursive; }
+.kaushan-script-font{ font-family: 'Kaushan Script', cursive; }
+.lobster-font{ font-family: 'Lobster', cursive; }
+.milkshake-font{ font-family: 'Milkshake', cursive; }
+.pacifico-font{ font-family: 'Pacifico', cursive; }
 
-
-// TEMPLATES FONTS SANS SERIF
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-
-// .open-sans-font{ font-family: 'Open Sans', sans-serif; }
-// .lato-font{ font-family: 'Lato', sans-serif; }
-// .montserrat-font{ font-family: 'Montserrat', sans-serif; }
-// .quicksand-font{ font-family: 'Quicksand', sans-serif; }
+.josefin-sans-font{ font-family: 'Josefin Sans', sans-serif; }
+.montserrat-font{ font-family: 'Montserrat', sans-serif; }
+.open-sans-font{ font-family: 'Open-sans', sans-serif; }
+.quicksand-font{ font-family: 'Quicksand', sans-serif; }
 
 
 @import "headings";

@@ -120,10 +120,10 @@ function invitaciones_scripts() {
 	wp_enqueue_script( 'invitaciones-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
 
 	if ( is_singular() ) {
-		wp_enqueue_script( 'invitaciones-js', get_template_directory_uri() . '/js/invitaciones.js', array('jquery'), '', true );
-		wp_enqueue_script( 'invitaciones-blob', get_template_directory_uri() . '/js/Blob.js', array('jquery'), '', true );
+		// wp_enqueue_script( 'invitaciones-blob', get_template_directory_uri() . '/js/Blob.js', array('jquery'), '', true );
 		wp_enqueue_script( 'invitaciones-file-saver', get_template_directory_uri() . '/js/FileSaver.min.js', array('jquery'), '', true );
 		wp_enqueue_script( 'invitaciones-dom-image', get_template_directory_uri() . '/js/dom-to-image.min.js', array('jquery'), '', true );
+		wp_enqueue_script( 'invitaciones-js', get_template_directory_uri() . '/js/invitaciones.js', array('jquery'), '', true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -150,7 +150,7 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Customizer additions.
  */
-// require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Widgets additions.

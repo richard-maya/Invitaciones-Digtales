@@ -44,8 +44,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<script src="https://kit.fontawesome.com/2ac572db93.js" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
-
+<script src="https://kit.fontawesome.com/2ac572db93.js" crossorigin="anonymous"></script>
 </body>
 </html>

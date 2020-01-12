@@ -22,10 +22,10 @@ get_header();
 		<section class="creador-invitaciones py-5">
 			<div class="container px-0">
 				<div class="row justify-content-center">
-					<div class="col-12 col-md-8 col-lg-9">
+					<div class="col-12 col-md-11 col-lg-10">
 						<h2 class="blue-pastel-color">Instrucciones</h2>
 						<p><?php the_field('instrucciones', 'option'); ?></p>
-						<h6 class="pink-dark-color text-right"><small class="title-font">Plantilla <?php the_id(); ?>, <?php the_title(); ?></small></h6>
+						<h6 class="pink-dark-color text-right"><small class="title-font">Plantilla Número: <?php the_field('numero_de_plantilla'); ?>, <?php the_title(); ?></small></h6>
 
 						<section class="template-form py-4">
 							<div class="row d-flex align-items-center">
@@ -87,19 +87,25 @@ get_header();
 															<label for="title-font-input">Tipografía principal</label>
 															<select class="form-control" id="title-font-input">
 																<option value="Courgette" selected>Courgette</option>
-																<option value="Pacifico">Pacifico</option>
+																<option value="AguaFina Script">AguaFina Script</option>
+																<option value="Alex Brush">Alex Brush</option>
+																<option value="Blackjack">Blackjack</option>
 																<option value="Dancing Script">Dancing Script</option>
+																<option value="Grand Hotel">Grand Hotel</option>
 																<option value="Great Vibes">Great Vibes</option>
-																<option value="Satisfy">Satisfy</option>
+																<option value="Kaushan Script">Kaushan Script</option>
+																<option value="Lobster">Lobster</option>
+																<option value="Milkshake">Milkshake</option>
+																<option value="Pacifico">Pacifico</option>
 															</select>
 														</div>
 														<div class="form-group col-12 col-lg-6">
 															<label for="secondary-font-input">Tipografía secundaria</label>
 															<select class="form-control" id="secondary-font-input">
 																<option value="Raleway" selected>Raleway</option>
-																<option value="Open Sans">Open Sans</option>
-																<option value="Lato">Lato</option>
+																<option value="Josefin Sans">Josefin Sans</option>
 																<option value="Montserrat">Montserrat</option>
+																<option value="Open Sans">Open Sans</option>
 																<option value="Quicksand">Quicksand</option>
 															</select>
 														</div>
@@ -144,40 +150,29 @@ get_header();
 								</div>
 								<div class="col-12 col-md-7 col-lg-6">
 									
-									<!-- TEMPLATE -->
-									<!-- <div class="invitation-template" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/bg/xv-anos/invitacion-xv-anos-1.jpg'); background-size: 100% 100%;">
-										<div class="invitation-frame" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/frame/xv-anos/invitacion-xv-anos-1.png'); background-size: 100% 100%;">
-											<div class="invitation-content d-flex align-items-center">
-												<div class="container text-center">
-													<div class="row justify-content-center">
-														<div class="col-12">
-															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/xv-anos/invitacion-xv-anos-1.png' class='img-fluid mb-2' alt='invitacion-xv-anos-1' id="icono-field" width="30%" height="auto"><br>
-															<p id="texto-1-field" style="font-family: 'Raleway';">Te invito a mis</p>
-															<p id="evento-field" style="font-family: 'Courgette'; color: #E881A8;">XV AÑOS</p>
-															<p id="nombre-field" style="font-family: 'Courgette'; color: #CFA027;">Nombre Apellido</p>
-															<p id="fecha-y-hora-field" style="font-family: 'Raleway';"><span id="fecha-field">Sábado 4 de Enero</span> a las <span id="hora-field">7:00</span>&nbsp;<span id="am-pm-field">pm</span></p>
-															<p id="direccion-1-field" style="font-family: 'Raleway';">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
-															<p id="texto-2-field" style="font-family: 'Raleway';">¡Te esperamos!</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div> -->
+									<?php 
+										$iconoTamanoInicial = get_field('icono_tamano_inicial');
+										$iconoTamanoInicialObjetct = get_field_object('icono_tamano_inicial');
+										$iconoTamanoInicial .= $iconoTamanoInicialObjetct['append']; 
+									?>
 									
-									<div class="invitation-template-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/bg/xv-anos/invitacion-xv-anos-1.jpg'); background-size: 100% 100%;" id="invitation-template-aspect-ratio">
-										<div class="invitation-frame-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/frame/xv-anos/invitacion-xv-anos-1.png'); background-size: 100% 100%;">
+									<div class="invitation-template-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/bg/xv-anos/invitacion-xv-anos-<?php the_field('numero_de_plantilla'); ?>.jpg'); background-size:100% 100%;" id="invitation-template-aspect-ratio">
+										<?php if( get_field('ocultar_marco') ): ?>
+											<div class="invitation-frame-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/frame/no-frame.png'); background-size: 100% 100%;">
+										<?php else: ?>
+											<div class="invitation-frame-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/frame/xv-anos/invitacion-xv-anos-<?php the_field('numero_de_plantilla'); ?>.png'); background-size: 100% 100%;">
+										<?php endif; ?>
 											<div class="invitation-content-aspect-ratio">
 												<div class="container text-center">
 													<div class="row">
 														<div class="col-12">
-															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/xv-anos/invitacion-xv-anos-1.png' class='img-fluid mb-2' alt='invitacion-xv-anos-1' id="icono-field" width="30%" height="auto"><br>
-															<p id="texto-1-field" style="font-family: 'Raleway';">Te invito a mis</p>
-															<p id="evento-field" style="font-family: 'Courgette'; color: #E881A8;">XV AÑOS</p>
-															<p id="nombre-field" style="font-family: 'Courgette'; color: #CFA027;">Nombre Apellido</p>
-															<p id="fecha-y-hora-field" style="font-family: 'Raleway';"><span id="fecha-field">Sábado 4 de Enero</span> a las <span id="hora-field">7:00</span>&nbsp;<span id="am-pm-field">pm</span></p>
-															<p id="direccion-1-field" style="font-family: 'Raleway';">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
-															<p id="texto-2-field" style="font-family: 'Raleway';">¡Te esperamos!</p>
+															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/xv-anos/invitacion-xv-anos-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-xv-anos' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br>
+															<p id="texto-1-field">Te invito a mis</p>
+															<p id="evento-field" class="title-font" style="color: <?php the_field('color_titulo'); ?>;">XV AÑOS</p>
+															<p id="nombre-field" class="title-font" style="color: <?php the_field('color_nombre'); ?>;">Nombre Apellido</p>
+															<p id="fecha-y-hora-field"><span id="fecha-field">Sábado 4 de Enero</span> a las <span id="hora-field">7:00</span>&nbsp;<span id="am-pm-field">pm</span></p>
+															<p id="direccion-1-field">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
+															<p id="texto-2-field">¡Te esperamos!</p>
 														</div>
 													</div>
 												</div>
@@ -187,12 +182,23 @@ get_header();
 									</div>
 								</div>
 							</div>
-						</section>
 
+							<div class="row py-5">
+								<div class="col-12">
+									<div id="image-output"></div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-8 col-lg-9">
 						<!-- RELATED TEMPLATES -->
 						<?php get_template_part( 'template-parts/related', 'posts' ); ?>
 					</div>
 					<div class="col-12 col-md-4 col-lg-3">
+						<!-- SIDEBAR -->
 						<?php get_sidebar(); ?>
 					</div>
 				</div>
