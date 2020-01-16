@@ -3,6 +3,11 @@ $('#nombre-input').keyup(function(){
     document.getElementById("nombre-field").innerHTML = nombreValue;
 })
 
+$('#evento-input').keyup(function(){
+    var eventoValue = document.getElementById("evento-input").value;
+    document.getElementById("evento-field").innerHTML = eventoValue;
+})
+
 $('#nombre-novia-input').keyup(function(){
     var nombreNoviaValue = document.getElementById("nombre-novia-input").value;
     document.getElementById("nombre-novia-field").innerHTML = nombreNoviaValue;
@@ -39,7 +44,7 @@ $('#papas-input').keyup(function(){
 
     var key = window.event.keyCode;
     if (key === 13) {
-        document.getElementById("papas-input").value = document.getElementById("papas-input").value + "\n<br>";
+        document.getElementById("papas-input").value = document.getElementById("papas-input").value + "<br>\n";
     }
 })
 

@@ -31,61 +31,106 @@ get_header();
 							<div class="row d-flex align-items-center">
 								<!-- FORM -->
 								<div class="col-12 col-md-5 col-lg-6">
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="nombre-input">Nombre de la Festejada <b class="pink-dark-color">*</b></label>
-											<input type="text" class="form-control" id="nombre-input" value="Nombre Apellido">
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="texto-1-input">Texto Inicial</label>
-											<textarea class="form-control" id="texto-1-input" rows="2">Te invito a mis</textarea>
-										</div>
-									</div>
-
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-5">
-											<label for="fecha-input">Fecha <b class="pink-dark-color">*</b></label>
-											<input type="date" class="form-control" id="fecha-input" value="2020-01-04">
-										</div>
-										<div class="form-group col-12 col-lg-4">
-											<label for="hora-input">Hora <b class="pink-dark-color">*</b></label>
-											<input type="time" class="form-control" id="hora-input" value="07:00">
-										</div>
-										<div class="form-group col-12 col-lg-3">
-											<label for="am-pm-input">AM/PM <b class="pink-dark-color">*</b></label>
-											<select class="form-control" id="am-pm-input">
-												<option value="am">am</option>
-												<option value="pm" selected>pm</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="direccion-1-input">Dirección <b class="pink-dark-color">*</b></label>
-											<textarea class="form-control" id="direccion-1-input" rows="3">Calle con número, Colonia y CP 00000. Municipio y Estado.</textarea>
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="texto-2-input">Texto final</label>
-											<textarea class="form-control" id="texto-2-input" rows="3">¡Te Esperamos!</textarea>
-										</div>
-									</div>
-
-									<hr class="my-3">
-
-									<div class="accordion mt-4" id="accordionExample">
+								<div class="accordion mt-4" id="accordionExample">
 										<div class="card card-accordion py-0">
 											<div class="card-header py-0" id="headingOne">
-												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Opciones Avanzadas</button>
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Datos generales</button>
 											</div>
 
-											<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+											<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+												<div class="card-body">
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="texto-1-input">Texto Inicial</label>
+															<textarea class="form-control" id="texto-1-input" rows="1">Te invito a mis</textarea>
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="nombre-input">Nombre de la Festejada <b class="pink-dark-color">*</b></label>
+															<input type="text" class="form-control form-control-sm" id="nombre-input" value="Nombre Apellido">
+														</div>
+													</div>
+
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="fecha-input">Fecha <b class="pink-dark-color">*</b></label>
+															<input type="date" class="form-control form-control-sm" id="fecha-input" value="2020-01-04">
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="texto-2-input">Texto final</label>
+															<textarea class="form-control" id="texto-2-input" rows="1">¡Te Esperamos!</textarea>
+														</div>
+													</div>
+
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="hora-misa-input">Hora (Misa) <b class="pink-dark-color">*</b></label>
+															<div class="row">
+																<div class="col-12 col-md-7">
+																	<input type="time" class="form-control form-control-sm" id="hora-misa-input" value="07:00">
+																</div>
+																<div class="col-12 col-md-5">
+																	<!-- <label for="am-pm-fiesta-input">&nbsp;</label> -->
+																	<select class="form-control form-control-sm" id="am-pm-misa-input">
+																		<option value="am">am</option>
+																		<option value="pm" selected>pm</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="hora-fiesta-input">Hora (Fiesta) <b class="pink-dark-color">*</b></label>
+															<div class="row">
+																<div class="col-12 col-md-7">
+																	<input type="time" class="form-control form-control-sm" id="hora-fiesta-input" value="07:00">
+																</div>
+																<div class="col-12 col-md-5">
+																	<!-- <label for="am-pm-fiesta-input">&nbsp;</label> -->
+																	<select class="form-control form-control-sm" id="am-pm-fiesta-input">
+																		<option value="am">am</option>
+																		<option value="pm" selected>pm</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="nombre-iglesia-input">Nombre Iglesia</label>
+															<input type="text" class="form-control form-control-sm" id="nombre-iglesia-input" value="Nombre Iglesia">
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="direccion-iglesia-input">Dirección Iglesia <b class="pink-dark-color">*</b></label>
+															<textarea class="form-control form-control-sm" id="direccion-iglesia-input" rows="3">Calle con número, Colonia y CP 00000. Municipio y Estado.</textarea>
+														</div>
+													</div>
+													
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="nombre-fiesta-input">Salón de Fiestas</label>
+															<input type="text" class="form-control form-control-sm" id="nombre-fiesta-input" value="Nombre Salón">
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="direccion-fiesta-input">Dirección Salón <b class="pink-dark-color">*</b></label>
+															<textarea class="form-control form-control-sm" id="direccion-fiesta-input" rows="3">Calle con número, Colonia y CP 00000. Municipio y Estado.</textarea>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="card card-accordion py-0">
+											<div class="card-header py-0" id="headingTwo">
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Opciones Avanzadas</button>
+											</div>
+
+											<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 												<div class="card-body">
 
 													<div class="form-row">
 														<div class="form-group col-12 col-lg-6">
 															<label for="title-font-input">Tipografía principal</label>
-															<select class="form-control" id="title-font-input">
+															<select class="form-control form-control-sm" id="title-font-input">
 																<option value="Courgette" selected>Courgette</option>
 																<option value="AguaFina Script">AguaFina Script</option>
 																<option value="Alex Brush">Alex Brush</option>
@@ -101,7 +146,7 @@ get_header();
 														</div>
 														<div class="form-group col-12 col-lg-6">
 															<label for="secondary-font-input">Tipografía secundaria</label>
-															<select class="form-control" id="secondary-font-input">
+															<select class="form-control form-control-sm" id="secondary-font-input">
 																<option value="Raleway" selected>Raleway</option>
 																<option value="Josefin Sans">Josefin Sans</option>
 																<option value="Montserrat">Montserrat</option>
@@ -114,29 +159,29 @@ get_header();
 													<div class="form-row">
 														<div class="form-group col-12 col-lg-6">
 															<label for="title-size-input">Tamaño del título</label>
-															<input type="range" class="form-control" id="title-size-input" value="50">
+															<input type="range" class="form-control form-control-sm" id="title-size-input" value="50">
 														</div>
 														<div class="form-group col-12 col-lg-6">
 															<label for="name-size-input">Tamaño del nombre</label>
-															<input type="range" class="form-control" id="name-size-input" value="50">
+															<input type="range" class="form-control form-control-sm" id="name-size-input" value="50">
 														</div>
 													</div>
 
 													<div class="form-row">
 														<div class="form-group col-12 col-lg-6">
 															<label for="font-size-input">Tamaño del texto</label>
-															<input type="range" class="form-control" id="font-size-input" value="50">
+															<input type="range" class="form-control form-control-sm" id="font-size-input" value="50">
 														</div>
 														<div class="form-group col-12 col-lg-6">
 															<label for="icono-size-input">Tamaño del Ícono</label>
-															<input type="range" class="form-control" id="icono-size-input" value="50">
+															<input type="range" class="form-control form-control-sm" id="icono-size-input" value="50">
 														</div>
 													</div>
 													
 													<div class="form-row">
 														<div class="form-group col-12 col-lg-6">
 															<label for="margin-input">Margen adicional</label>
-															<input type="range" class="form-control" id="margin-input" value="0">
+															<input type="range" class="form-control form-control-sm" id="margin-input" value="0">
 														</div>
 													</div>
 												</div>
@@ -144,9 +189,7 @@ get_header();
 										</div>
 									</div>
 
-									<hr class="my-3">
-
-									<button id="save-image" class="btn btn-invitaciones btn-block" role="button">Descargar imagen</button>
+									<button id="save-image" class="btn btn-invitaciones btn-block my-4" role="button">Descargar imagen</button>
 								</div>
 								<div class="col-12 col-md-7 col-lg-6">
 									
@@ -167,12 +210,23 @@ get_header();
 													<div class="row">
 														<div class="col-12">
 															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/xv-anos/invitacion-xv-anos-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-xv-anos' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br><br>
-															<p id="texto-1-field" class="plantillas-textos">Te invito a mis</p>
+															<p id="texto-1-field" class="plantillas-titulos">Te invito a mis</p>
 															<p id="evento-field" class="title-font" style="color: <?php the_field('color_titulo'); ?>;">XV AÑOS</p>
 															<p id="nombre-field" class="title-font" style="color: <?php the_field('color_nombre'); ?>;">Nombre Apellido</p>
-															<p id="fecha-y-hora-field" class="plantillas-textos"><span id="fecha-field">Sábado 4 de Enero</span> a las <span id="hora-field">7:00</span>&nbsp;<span id="am-pm-field">pm</span></p><br>
-															<p id="direccion-1-field" class="plantillas-textos">Calle con número, Colonia y CP 00000. Municipio y Estado.</p><br>
-															<p id="texto-2-field" class="plantillas-textos">¡Te esperamos!</p>
+															<p id="fecha-y-hora-field" class="plantillas-titulos"><span id="fecha-field">Sábado 4 de Enero</span></p><br>
+															<div class="row">
+																<div class="col-6">
+																	<p class="lead plantillas-titulos" id="nombre-iglesia-field"><b>Nombre Iglesia</b></p>
+																	<p class="plantillas-textos" id="direccion-misa-field">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
+																	<p class="plantillas-textos"><span id="hora-misa-field">7:00</span>&nbsp;<span id="am-pm-misa-field">pm</span></p>
+																</div>
+																<div class="col-6">
+																	<p class="lead plantillas-titulos" id="nombre-fiesta-field"><b>Nombre Salón</b></p>
+																	<p class="plantillas-textos" id="direccion-fiesta-field">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
+																	<p class="plantillas-textos"><span id="hora-fiesta-field">7:00</span>&nbsp;<span id="am-pm-fiesta-field">pm</span></p>
+																</div>
+															</div>
+															<p id="texto-2-field" class="plantillas-textos my-2">¡Te Esperamos!</p>
 														</div>
 													</div>
 												</div>

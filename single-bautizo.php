@@ -31,92 +31,101 @@ get_header();
 							<div class="row d-flex align-items-center">
 								<!-- FORM -->
 								<div class="col-12 col-md-5 col-lg-6">
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="nombre-input">Nombre del festejado <b class="pink-dark-color">*</b></label>
-											<input type="text" class="form-control form-control-sm" id="nombre-input" value="Nombre Apellido">
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="fecha-input">Fecha <b class="pink-dark-color">*</b></label>
-											<input type="date" class="form-control form-control-sm" id="fecha-input" value="2020-01-04">
-										</div>
-									</div>
-
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="padrinos-input">Mis Padrinos <b class="pink-dark-color">*</b></label>
-											<textarea class="form-control form-control-sm" id="padrinos-input" rows="3">Mi madrina<br>Mi padrino</textarea>
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="papas-input">Mis Papás <b class="pink-dark-color">*</b></label>
-											<textarea class="form-control form-control-sm" id="papas-input" rows="3">Mi mamá<br>Mi papá</textarea>
-										</div>
-									</div>
-
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="hora-misa-input">Hora (Misa) <b class="pink-dark-color">*</b></label>
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<input type="time" class="form-control form-control-sm" id="hora-misa-input" value="07:00">
-												</div>
-												<div class="col-12 col-md-6">
-													<!-- <label for="am-pm-fiesta-input">&nbsp;</label> -->
-													<select class="form-control form-control-sm" id="am-pm-misa-input">
-														<option value="am">am</option>
-														<option value="pm" selected>pm</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="hora-fiesta-input">Hora (Fiesta) <b class="pink-dark-color">*</b></label>
-											<div class="row">
-												<div class="col-12 col-md-6">
-													<input type="time" class="form-control form-control-sm" id="hora-fiesta-input" value="07:00">
-												</div>
-												<div class="col-12 col-md-6">
-													<!-- <label for="am-pm-fiesta-input">&nbsp;</label> -->
-													<select class="form-control form-control-sm" id="am-pm-fiesta-input">
-														<option value="am">am</option>
-														<option value="pm" selected>pm</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="nombre-iglesia-input">Nombre Iglesia</label>
-											<input type="text" class="form-control form-control-sm" id="nombre-iglesia-input" value="Nombre Iglesia">
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="direccion-iglesia-input">Dirección Iglesia <b class="pink-dark-color">*</b></label>
-											<textarea class="form-control form-control-sm" id="direccion-iglesia-input" rows="3">Calle con número, Colonia y CP 00000. Municipio y Estado.</textarea>
-										</div>
-									</div>
 									
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="nombre-fiesta-input">Salón de Fiestas</label>
-											<input type="text" class="form-control form-control-sm" id="nombre-fiesta-input" value="Nombre Salón">
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="direccion-fiesta-input">Dirección Salón <b class="pink-dark-color">*</b></label>
-											<textarea class="form-control form-control-sm" id="direccion-fiesta-input" rows="3">Calle con número, Colonia y CP 00000. Municipio y Estado.</textarea>
-										</div>
-									</div>
-
-									<hr class="my-3">
-
 									<div class="accordion mt-4" id="accordionExample">
 										<div class="card card-accordion py-0">
 											<div class="card-header py-0" id="headingOne">
-												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Opciones Avanzadas</button>
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Datos generales</button>
 											</div>
 
-											<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+											<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+												<div class="card-body">
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="nombre-input">Nombre del festejad@ <b class="pink-dark-color">*</b></label>
+															<input type="text" class="form-control form-control-sm" id="nombre-input" value="Nombre Apellido">
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="fecha-input">Fecha <b class="pink-dark-color">*</b></label>
+															<input type="date" class="form-control form-control-sm" id="fecha-input" value="2020-01-04">
+														</div>
+													</div>
+
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="padrinos-input">Mis Padrinos <b class="pink-dark-color">*</b></label>
+															<textarea class="form-control form-control-sm" id="padrinos-input" rows="3">Mi madrina y Mi padrino</textarea>
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="papas-input">Mis Papás <b class="pink-dark-color">*</b></label>
+															<textarea class="form-control form-control-sm" id="papas-input" rows="3">Mi mamá y Mi papá</textarea>
+														</div>
+													</div>
+
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="hora-misa-input">Hora (Misa) <b class="pink-dark-color">*</b></label>
+															<div class="row">
+																<div class="col-12 col-md-7">
+																	<input type="time" class="form-control form-control-sm" id="hora-misa-input" value="07:00">
+																</div>
+																<div class="col-12 col-md-5">
+																	<!-- <label for="am-pm-fiesta-input">&nbsp;</label> -->
+																	<select class="form-control form-control-sm" id="am-pm-misa-input">
+																		<option value="am">am</option>
+																		<option value="pm" selected>pm</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="hora-fiesta-input">Hora (Fiesta) <b class="pink-dark-color">*</b></label>
+															<div class="row">
+																<div class="col-12 col-md-7">
+																	<input type="time" class="form-control form-control-sm" id="hora-fiesta-input" value="07:00">
+																</div>
+																<div class="col-12 col-md-5">
+																	<!-- <label for="am-pm-fiesta-input">&nbsp;</label> -->
+																	<select class="form-control form-control-sm" id="am-pm-fiesta-input">
+																		<option value="am">am</option>
+																		<option value="pm" selected>pm</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="nombre-iglesia-input">Nombre Iglesia</label>
+															<input type="text" class="form-control form-control-sm" id="nombre-iglesia-input" value="Nombre Iglesia">
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="direccion-iglesia-input">Dirección Iglesia <b class="pink-dark-color">*</b></label>
+															<textarea class="form-control form-control-sm" id="direccion-iglesia-input" rows="3">Calle con número, Colonia y CP 00000. Municipio y Estado.</textarea>
+														</div>
+													</div>
+													
+													<div class="form-row">
+														<div class="form-group col-12 col-lg-6">
+															<label for="nombre-fiesta-input">Salón de Fiestas</label>
+															<input type="text" class="form-control form-control-sm" id="nombre-fiesta-input" value="Nombre Salón">
+														</div>
+														<div class="form-group col-12 col-lg-6">
+															<label for="direccion-fiesta-input">Dirección Salón <b class="pink-dark-color">*</b></label>
+															<textarea class="form-control form-control-sm" id="direccion-fiesta-input" rows="3">Calle con número, Colonia y CP 00000. Municipio y Estado.</textarea>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="card card-accordion py-0">
+											<div class="card-header py-0" id="headingTwo">
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Opciones Avanzadas</button>
+											</div>
+
+											<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 												<div class="card-body">
 
 													<div class="form-row">
@@ -181,9 +190,9 @@ get_header();
 										</div>
 									</div>
 
-									<hr class="my-3">
+									<!-- <hr class="my-3"> -->
 
-									<button id="save-image" class="btn btn-invitaciones btn-block" role="button">Descargar imagen</button>
+									<button id="save-image" class="btn btn-invitaciones btn-block my-4" role="button">Descargar imagen</button>
 								</div>
 								<div class="col-12 col-md-7 col-lg-6">
 									
@@ -205,15 +214,15 @@ get_header();
 														<div class="col-12">
 															<p id="evento-field" class="title-font" style="color: <?php the_field('color_titulo'); ?>;">Mi Bautizo</p>
 															<p id="nombre-field" class="title-font" style="color: <?php the_field('color_nombre'); ?>;">Nombre Apellido</p>
-															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/bautizo/invitacion-bautizo-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-xv-anos' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br>
+															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/bautizo/invitacion-bautizo-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-bautizo' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br>
 															<div class="row">
 																<div class="col-6">
 																	<p class="lead plantillas-titulos"><b>Mis Papás</b></p>
-																	<p class="plantillas-textos" id="papas-field">Nombre papás</p>
+																	<p class="plantillas-textos" id="papas-field">Mi mamá y mi papá</p>
 																</div>
 																<div class="col-6">
 																	<p class="lead plantillas-titulos"><b>Mis Padrinos</b></p>
-																	<p class="plantillas-textos" id="padrinos-field">Nombre padrinos</p>
+																	<p class="plantillas-textos" id="padrinos-field">Mi madrina y Mi Padrino</p>
 																</div>
 															</div>
 															<div class="row py-3">

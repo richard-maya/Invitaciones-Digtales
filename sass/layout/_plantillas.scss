@@ -52,7 +52,11 @@ section.creador-invitaciones{
 
                 p{
                     font-size: 1rem;
-                    margin-bottom: 0.1rem;
+                    margin-bottom: 0.15rem;
+
+                    &.plantillas-titulos{
+                        font-size: 1.2rem;
+                    }
 
                     &#evento-field,
                     &#nombre-field{
