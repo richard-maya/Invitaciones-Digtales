@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Bautizo
+ * Template Name: Boda
  * Template Post Type: post
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
@@ -33,23 +33,16 @@ get_header();
 								<div class="col-12 col-md-5 col-lg-6">
 									<div class="form-row">
 										<div class="form-group col-12 col-lg-6">
-											<label for="nombre-input">Nombre del festejado <b class="pink-dark-color">*</b></label>
-											<input type="text" class="form-control form-control-sm" id="nombre-input" value="Nombre Apellido">
+											<label for="nombre-novia-input">Nombre de la novia <b class="pink-dark-color">*</b></label>
+											<input type="text" class="form-control form-control-sm" id="nombre-novia-input" value="Nombre Novia">
+										</div>
+										<div class="form-group col-12 col-lg-6">
+											<label for="nombre-novio-input">Nombre del novio <b class="pink-dark-color">*</b></label>
+											<input type="text" class="form-control form-control-sm" id="nombre-novio-input" value="Nombre Novio">
 										</div>
 										<div class="form-group col-12 col-lg-6">
 											<label for="fecha-input">Fecha <b class="pink-dark-color">*</b></label>
 											<input type="date" class="form-control form-control-sm" id="fecha-input" value="2020-01-04">
-										</div>
-									</div>
-
-									<div class="form-row">
-										<div class="form-group col-12 col-lg-6">
-											<label for="padrinos-input">Mis Padrinos <b class="pink-dark-color">*</b></label>
-											<textarea class="form-control form-control-sm" id="padrinos-input" rows="3">Mi madrina<br>Mi padrino</textarea>
-										</div>
-										<div class="form-group col-12 col-lg-6">
-											<label for="papas-input">Mis Papás <b class="pink-dark-color">*</b></label>
-											<textarea class="form-control form-control-sm" id="papas-input" rows="3">Mi mamá<br>Mi papá</textarea>
 										</div>
 									</div>
 
@@ -193,44 +186,34 @@ get_header();
 										$iconoTamanoInicial .= $iconoTamanoInicialObjetct['append']; 
 									?>
 									
-									<div class="invitation-template-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/bg/bautizo/invitacion-bautizo-<?php the_field('numero_de_plantilla'); ?>.jpg'); background-size:100% 100%;" id="invitation-template-aspect-ratio">
+									<div class="invitation-template-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/bg/boda/invitacion-boda-<?php the_field('numero_de_plantilla'); ?>.jpg'); background-size:100% 100%;" id="invitation-template-aspect-ratio">
 										<?php if( get_field('ocultar_marco') ): ?>
 											<div class="invitation-frame-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/frame/no-frame.png'); background-size: 100% 100%;">
 										<?php else: ?>
-											<div class="invitation-frame-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/frame/bautizo/invitacion-bautizo-<?php the_field('numero_de_plantilla'); ?>.png'); background-size: 100% 100%;">
+											<div class="invitation-frame-aspect-ratio" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/frame/boda/invitacion-boda-<?php the_field('numero_de_plantilla'); ?>.png'); background-size: 100% 100%;">
 										<?php endif; ?>
 											<div class="invitation-content-aspect-ratio">
 												<div class="container text-center">
 													<div class="row">
 														<div class="col-12">
-															<p id="evento-field" class="title-font" style="color: <?php the_field('color_titulo'); ?>;">Mi Bautizo</p>
-															<p id="nombre-field" class="title-font" style="color: <?php the_field('color_nombre'); ?>;">Nombre Apellido</p>
-															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/bautizo/invitacion-bautizo-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-xv-anos' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br>
-															<div class="row">
-																<div class="col-6">
-																	<p class="lead plantillas-titulos"><b>Mis Papás</b></p>
-																	<p class="plantillas-textos" id="papas-field">Nombre papás</p>
-																</div>
-																<div class="col-6">
-																	<p class="lead plantillas-titulos"><b>Mis Padrinos</b></p>
-																	<p class="plantillas-textos" id="padrinos-field">Nombre padrinos</p>
-																</div>
-															</div>
+															<p id="evento-field" class="title-font" style="color: <?php the_field('color_titulo'); ?>;">¡Nos Cazamos!</p>
+															<p class="title-font" id="nombre-field" style="color: <?php the_field('color_titulo'); ?>;"><span id="nombre-novia-field">Nombre Novia</span> & <span id="nombre-novio-field">Nombre Novio</span></p><br>
+															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/boda/invitacion-boda-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-boda' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br>
 															<div class="row py-3">
 																<div class="col-12">
-																	<p id="fecha-field" class="plantillas-titulos">Sábado 4 de Enero</p>
+																	<p id="fecha-field" class="plantillas-titulos" style="color: <?php the_field('color_nombre'); ?>;">Sábado 4 de Enero</p>
 																</div>
 															</div>
 															<div class="row">
 																<div class="col-6">
-																	<p class="lead plantillas-titulos" id="nombre-iglesia-field"><b>Nombre Iglesia</b></p>
-																	<p class="plantillas-textos" id="direccion-misa-field">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
-																	<p class="plantillas-textos"><span id="hora-misa-field">7:00</span>&nbsp;<span id="am-pm-misa-field">pm</span></p>
+																	<p class="lead plantillas-titulos" id="nombre-iglesia-field" style="color: <?php the_field('color_nombre'); ?>;"><b>Nombre Iglesia</b></p>
+																	<p class="plantillas-textos" id="direccion-misa-field" style="color: <?php the_field('color_nombre'); ?>;">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
+																	<p class="plantillas-textos"><span id="hora-misa-field" style="color: <?php the_field('color_nombre'); ?>;">7:00</span>&nbsp;<span id="am-pm-misa-field" style="color: <?php the_field('color_nombre'); ?>;">pm</span></p>
 																</div>
 																<div class="col-6">
-																	<p class="lead plantillas-titulos" id="nombre-fiesta-field"><b>Nombre Salón</b></p>
-																	<p class="plantillas-textos" id="direccion-fiesta-field">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
-																	<p class="plantillas-textos"><span id="hora-fiesta-field">7:00</span>&nbsp;<span id="am-pm-fiesta-field">pm</span></p>
+																	<p class="lead plantillas-titulos" id="nombre-fiesta-field" style="color: <?php the_field('color_nombre'); ?>;"><b>Nombre Salón</b></p>
+																	<p class="plantillas-textos" id="direccion-fiesta-field" style="color: <?php the_field('color_nombre'); ?>;">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
+																	<p class="plantillas-textos"><span id="hora-fiesta-field" style="color: <?php the_field('color_nombre'); ?>;">7:00</span>&nbsp;<span id="am-pm-fiesta-field" style="color: <?php the_field('color_nombre'); ?>;">pm</span></p>
 																</div>
 															</div>
 														</div>

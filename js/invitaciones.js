@@ -3,6 +3,26 @@ $('#nombre-input').keyup(function(){
     document.getElementById("nombre-field").innerHTML = nombreValue;
 })
 
+$('#nombre-novia-input').keyup(function(){
+    var nombreNoviaValue = document.getElementById("nombre-novia-input").value;
+    document.getElementById("nombre-novia-field").innerHTML = nombreNoviaValue;
+})
+
+$('#nombre-novio-input').keyup(function(){
+    var nombreNovioValue = document.getElementById("nombre-novio-input").value;
+    document.getElementById("nombre-novio-field").innerHTML = nombreNovioValue;
+})
+
+$('#nombre-iglesia-input').keyup(function(){
+    var nombreMisaValue = document.getElementById("nombre-iglesia-input").value;
+    document.getElementById("nombre-iglesia-field").innerHTML = nombreMisaValue;
+})
+
+$('#nombre-fiesta-input').keyup(function(){
+    var nombreFiestaValue = document.getElementById("nombre-fiesta-input").value;
+    document.getElementById("nombre-fiesta-field").innerHTML = nombreFiestaValue;
+})
+
 $('#texto-1-input').keyup(function(){
     var texto1Value = document.getElementById("texto-1-input").value;
     document.getElementById("texto-1-field").innerHTML = texto1Value;
@@ -10,6 +30,26 @@ $('#texto-1-input').keyup(function(){
     var key = window.event.keyCode;
     if (key === 13) {
         document.getElementById("texto-1-input").value = document.getElementById("texto-1-input").value + "<br>\n";
+    }
+})
+
+$('#papas-input').keyup(function(){
+    var texto1Value = document.getElementById("papas-input").value;
+    document.getElementById("papas-field").innerHTML = texto1Value;
+
+    var key = window.event.keyCode;
+    if (key === 13) {
+        document.getElementById("papas-input").value = document.getElementById("papas-input").value + "\n<br>";
+    }
+})
+
+$('#padrinos-input').keyup(function(){
+    var texto1Value = document.getElementById("padrinos-input").value;
+    document.getElementById("padrinos-field").innerHTML = texto1Value;
+
+    var key = window.event.keyCode;
+    if (key === 13) {
+        document.getElementById("padrinos-input").value = document.getElementById("padrinos-input").value + "<br>\n";
     }
 })
 
@@ -51,6 +91,26 @@ $('#am-pm-input').change(function () {
     document.getElementById("am-pm-field").innerHTML = ampmValue;
 })
 
+$('#hora-misa-input').change(function () {
+    var horaMisaValue = document.getElementById("hora-misa-input").value;
+    document.getElementById("hora-misa-field").innerHTML = horaMisaValue;
+})
+
+$('#am-pm-misa-input').change(function () {
+    var ampmMisaValue = document.getElementById("am-pm-misa-input").value;
+    document.getElementById("am-pm-misa-field").innerHTML = ampmMisaValue;
+})
+
+$('#hora-fiesta-input').change(function () {
+    var horaFiestaValue = document.getElementById("hora-fiesta-input").value;
+    document.getElementById("hora-fiesta-field").innerHTML = horaFiestaValue;
+})
+
+$('#am-pm-fiesta-input').change(function () {
+    var ampmFiestaValue = document.getElementById("am-pm-fiesta-input").value;
+    document.getElementById("am-pm-fiesta-field").innerHTML = ampmFiestaValue;
+})
+
 $('#direccion-1-input').keyup(function(){
     var direccion1Value = document.getElementById("direccion-1-input").value;
     document.getElementById("direccion-1-field").innerHTML = direccion1Value;
@@ -58,6 +118,26 @@ $('#direccion-1-input').keyup(function(){
     var keyDireccion = window.event.keyCode;
     if (keyDireccion === 13) {
         document.getElementById("direccion-1-input").value = document.getElementById("direccion-1-input").value + "<br>\n";
+    }
+})
+
+$('#direccion-iglesia-input').keyup(function(){
+    var direccionMisaValue = document.getElementById("direccion-iglesia-input").value;
+    document.getElementById("direccion-misa-field").innerHTML = direccionMisaValue;
+
+    var keyDireccion = window.event.keyCode;
+    if (keyDireccion === 13) {
+        document.getElementById("direccion-iglesia-input").value = document.getElementById("direccion-iglesia-input").value + "<br>\n";
+    }
+})
+
+$('#direccion-fiesta-input').keyup(function(){
+    var direccionFiestaValue = document.getElementById("direccion-fiesta-input").value;
+    document.getElementById("direccion-fiesta-field").innerHTML = direccionFiestaValue;
+
+    var keyDireccion = window.event.keyCode;
+    if (keyDireccion === 13) {
+        document.getElementById("direccion-fiesta-input").value = document.getElementById("direccion-fiesta-input").value + "<br>\n";
     }
 })
 
@@ -80,10 +160,8 @@ $("#icono-size-input").change(function() {
 
 $("#font-size-input").change(function() {
     var fontSize = document.getElementById("font-size-input").value;
-    $("#texto-1-field").css('font-size', (fontSize)/2 + "px");
-    $("#fecha-y-hora-field").css('font-size', (fontSize)/2 + "px");
-    $("#direccion-1-field").css('font-size', (fontSize)/2 + "px");
-    $("#texto-2-field").css('font-size', (fontSize)/2 + "px");
+    $(".invitation-template-aspect-ratio p.plantillas-textos").css('font-size', (fontSize)/3 + "px");
+    $(".invitation-template-aspect-ratio p.plantillas-titulos").css('font-size', (fontSize)/2.5 + "px");
 });
 
 $("#title-size-input").change(function() {
@@ -106,14 +184,14 @@ $("#title-font-input").change(function () {
     var primaryFont = document.getElementById("title-font-input").value;
     $("#evento-field").css('font-family', "'" + primaryFont + "', cursive");
     $("#nombre-field").css('font-family', "'" + primaryFont + "', cursive");
+    $("#nombre-novia-field").css('font-family', "'" + primaryFont + "', cursive");
+    $("#nombre-novio-field").css('font-family', "'" + primaryFont + "', cursive");
 });
 
 $("#secondary-font-input").change(function () {
     var secondaryFont = document.getElementById("secondary-font-input").value;
-    $("#texto-1-field").css('font-family', "'" + secondaryFont + "', sans-serif");
-    $("#fecha-y-hora-field").css('font-family', "'" + secondaryFont + "', sans-serif");
-    $("#direccion-1-field").css('font-family', "'" + secondaryFont + "', sans-serif");
-    $("#texto-2-field").css('font-family', "'" + secondaryFont + "', sans-serif");
+    $(".invitation-template-aspect-ratio p.plantillas-textos").css('font-family', "'" + secondaryFont + "', sans-serif");
+    $(".invitation-template-aspect-ratio p.plantillas-titulos").css('font-family', "'" + secondaryFont + "', sans-serif");
 });
 
 
@@ -124,8 +202,6 @@ $("#secondary-font-input").change(function () {
 //         $("p.signature").removeClass('d-block').addClass('d-none');
 //     });
 // });
-
-// TODO: Update invitaciones.js
 
 $('#save-image').click(function(){
     $("p.signature").removeClass('d-none').addClass('d-block');

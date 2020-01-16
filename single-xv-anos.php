@@ -114,22 +114,22 @@ get_header();
 													<div class="form-row">
 														<div class="form-group col-12 col-lg-6">
 															<label for="title-size-input">Tamaño del título</label>
-															<input type="range" class="form-control" id="title-size-input" value="64">
+															<input type="range" class="form-control" id="title-size-input" value="50">
 														</div>
 														<div class="form-group col-12 col-lg-6">
 															<label for="name-size-input">Tamaño del nombre</label>
-															<input type="range" class="form-control" id="name-size-input" value="64">
+															<input type="range" class="form-control" id="name-size-input" value="50">
 														</div>
 													</div>
 
 													<div class="form-row">
 														<div class="form-group col-12 col-lg-6">
 															<label for="font-size-input">Tamaño del texto</label>
-															<input type="range" class="form-control" id="font-size-input" value="32">
+															<input type="range" class="form-control" id="font-size-input" value="50">
 														</div>
 														<div class="form-group col-12 col-lg-6">
 															<label for="icono-size-input">Tamaño del Ícono</label>
-															<input type="range" class="form-control" id="icono-size-input" value="30">
+															<input type="range" class="form-control" id="icono-size-input" value="50">
 														</div>
 													</div>
 													
@@ -166,13 +166,13 @@ get_header();
 												<div class="container text-center">
 													<div class="row">
 														<div class="col-12">
-															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/xv-anos/invitacion-xv-anos-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-xv-anos' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br>
-															<p id="texto-1-field">Te invito a mis</p>
+															<img src='<?php echo esc_url(get_template_directory_uri()); ?>/plantillas/icon/xv-anos/invitacion-xv-anos-<?php the_field('numero_de_plantilla'); ?>.png' class='img-fluid mb-2' alt='invitacion-xv-anos' id="icono-field" width="<?php echo $iconoTamanoInicial; ?>" height="auto"><br><br>
+															<p id="texto-1-field" class="plantillas-textos">Te invito a mis</p>
 															<p id="evento-field" class="title-font" style="color: <?php the_field('color_titulo'); ?>;">XV AÑOS</p>
 															<p id="nombre-field" class="title-font" style="color: <?php the_field('color_nombre'); ?>;">Nombre Apellido</p>
-															<p id="fecha-y-hora-field"><span id="fecha-field">Sábado 4 de Enero</span> a las <span id="hora-field">7:00</span>&nbsp;<span id="am-pm-field">pm</span></p>
-															<p id="direccion-1-field">Calle con número, Colonia y CP 00000. Municipio y Estado.</p>
-															<p id="texto-2-field">¡Te esperamos!</p>
+															<p id="fecha-y-hora-field" class="plantillas-textos"><span id="fecha-field">Sábado 4 de Enero</span> a las <span id="hora-field">7:00</span>&nbsp;<span id="am-pm-field">pm</span></p><br>
+															<p id="direccion-1-field" class="plantillas-textos">Calle con número, Colonia y CP 00000. Municipio y Estado.</p><br>
+															<p id="texto-2-field" class="plantillas-textos">¡Te esperamos!</p>
 														</div>
 													</div>
 												</div>
